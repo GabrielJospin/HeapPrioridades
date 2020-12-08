@@ -27,5 +27,16 @@ public class Heap {
 
     }
 
+    int GetPositionDad (int i){
+        return (i-1)/2;
+    }
+
+    int GetPositiosRight(int i){
+        return 2*i + 2;
+    }
+
+    int GetPositionLeft(int i){
+        return 2*i + 1;
+    }
 
 }
