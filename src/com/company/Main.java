@@ -12,14 +12,14 @@ public class Main {
     public static void main(String[] args) {
 
 	    System.out.println("\t\t***Trabalho de IAA***");
-        System.out.println("Maria Eduarda Rodrigues Garcia\t 11796621");
-        System.out.println("Gabriel Medeiros Jospin\t 11796020");
+        System.out.println("Maria Eduarda Rodrigues Garcia - 11796621");
+        System.out.println("Gabriel Medeiros Jospin - 11796020");
         System.out.println("");
 
         while (true){
           System.out.println("Selecione a função a ser testada: ");
-          System.out.println("1. imprime Chamado de Máxima Prioridade");
-          System.out.println("2. extrai Chamado de Máxima Prioridade");
+          System.out.println("1. imprime Chamado de Máxima Prioridade - Indisponivel");
+          System.out.println("2. extrai Chamado de Máxima Prioridade - Indisponivel");
           System.out.println("3. insere Chamado");
           System.out.println("4. imprime fila de chamados");
           System.out.println("5. EXIT");

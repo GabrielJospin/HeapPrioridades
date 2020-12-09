@@ -29,38 +29,6 @@ public class Heap {
         return true;
     }
 
-    /*public boolean insert(Registro register, int position){
-
-        if(position >= maxElementos){
-            return false;
-        }
-
-        if(heap[position] == null){
-            m++;
-            heap[position] = register;
-            return true;
-        }
-
-        if(heap[position].priority < register.priority){
-            Registro helper =  heap[position];
-            heap[position] = register;
-            return  insert(helper,0);
-        }
-
-        int law = (int) (2* heap[position].priority)/3;
-        int left = GetPositionLeft(position);
-        int right = GetPositionRight(position);
-
-        boolean way = register.priority<law;
-
-        if(way)
-            return insert(register,left);
-
-        return insert(register,right);
-
-
-    }*/
-
     public void Print(int position, int displacement){
         if(position>=maxElementos){
             return;
