@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 
 import java.util.Random;
 
@@ -7,6 +7,11 @@ public class Registro {
     public double priority;
     private Random random = new Random();
 
+    Registro(){
+        this.id=-1;
+        this.priority=-1;
+    }
+    
     Registro(int id, double priority) throws Exception {
         if(priority < 0 || priority>900000){
             String error = String.format("Error: Prioridade do objeto (%.1f) deve estar no intervalo [0,900000]",priority);

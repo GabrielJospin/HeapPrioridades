@@ -1,4 +1,4 @@
-package com.company;
+//package com.company;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -18,7 +18,7 @@ public class Main {
 
         while (true){
           System.out.println("Selecione a função a ser testada: ");
-          System.out.println("1. imprime Chamado de Máxima Prioridade - Indisponivel");
+          System.out.println("1. imprime Chamado de Máxima Prioridade");
           System.out.println("2. extrai Chamado de Máxima Prioridade - Indisponivel");
           System.out.println("3. insere Chamado");
           System.out.println("4. imprime fila de chamados");

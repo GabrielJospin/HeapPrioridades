@@ -1,9 +1,9 @@
-package com.company;
+//package com.company;
 
 public class Heap {
-    Registro[] heap;
-    int maxElementos;
-    int size;
+    Registro[] heap; //vetor A
+    int maxElementos; //maximo de eletos de A
+    int size; //m - quantidade atual de eletos no heap
 
     Heap(){
         this.heap = new Registro[4000];
@@ -11,13 +11,51 @@ public class Heap {
         size = 0;
     }
 
-    public Registro max(){
-        return null;
+    public Registro max(){ //eleto que possui maior prioridade é raiz
+        if(size == 0){
+            Registro rg = new Registro();
+            return rg;
+        }
+        else return heap[0];
+    }
+
+    public void maxHeapify(int posicao){
+        int filhoEsq = GetPositionLeft(posicao);
+        int filhoDir = GetPositionRight(posicao);
+        int maior = posicao;
+        if(filhoDir > 0 && filhoDir <= size){
+            if(heap[filhoDir].priority > heap[filhoEsq].priority)   maior=filhoDir;
+        }
+        if(filhoEsq > 0 && filhoEsq <= size){
+            if(heap[filhoEsq].priority > heap[maior].priority)  maior = filhoEsq;
+        }
+        
+
+        if(maior != posicao){
+            Registro rg = heap[posicao];
+            heap[posicao] = heap[maior];
+            heap[maior] = rg;
+            maxHeapify(maior);
+        }
+         
     }
 
     public Registro extractMax(){
-        return null;
+        if(size==0){
+            Registro rg = new Registro();
+            return rg;
+        }
+        else{
+            Registro aux = heap[0];
+            heap[0] = heap[size-1];
+            size--;
+            maxHeapify(0); //raiz desorganizada
+            return aux;
+        }
+        
     }
+
+    
 
     public boolean insert(Registro rg){
         if(size >= maxElementos)
